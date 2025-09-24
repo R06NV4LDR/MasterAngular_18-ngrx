@@ -10,7 +10,10 @@
 */node_modules
 npm-debug.log
 yarn-error.log
-package-lock.json
+
+# IN THIS SPECIAL CASE WE NEED THE PACKAGE_LOCK_JSON
+# TO PROVIDE THE NEEDED DEPENDENCIES
+# package-lock.json
 
 # IDEs and editors
 .idea/
@@ -30,7 +33,7 @@ package-lock.json
 .history/*
 
 # Miscellaneous
-/.angular/cache
+*/.angular/
 .sass-cache/
 /connect.lock
 /coverage
