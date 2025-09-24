@@ -1,7 +1,5 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { Subscription } from "rxjs";
-
-import { CounterService } from "../counter.service";
+import { Component } from "@angular/core";
+import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
 
 @Component({
@@ -9,9 +7,10 @@ import { Store } from "@ngrx/store";
   templateUrl: "./counter-output.component.html",
   styleUrls: ["./counter-output.component.css"],
 })
-export class CounterOutputComponent implements OnInit, OnDestroy {
-  counter = 0;
-  counterServiceSub?: Subscription;
+export class CounterOutputComponent {
+  count$: Observable<number>;
 
-  constructor(private store: Store) {}
+  constructor(private store: Store<{ counter: number }>) {
+    this.count$ = store.select("counter");
+  }
 }
