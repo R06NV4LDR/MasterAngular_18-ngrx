@@ -6,7 +6,6 @@ import { CounterService } from '../counter.service';
   selector: 'app-counter-controls',
   templateUrl: './counter-controls.component.html',
   styleUrls: ['./counter-controls.component.css'],
-  standalone: true,
 })
 export class CounterControlsComponent {
   constructor(private counterService: CounterService) {}

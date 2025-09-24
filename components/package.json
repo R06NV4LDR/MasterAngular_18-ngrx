@@ -1,5 +1,5 @@
 {
-  "name": "ngrx-intro-standalone",
+  "name": "ngrx-intro",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
