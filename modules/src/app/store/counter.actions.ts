@@ -11,9 +11,9 @@ export const decrement = createAction(
 );
 
 
-// ##############################################
-// 692. An alternative way of defining actions ##
-// ##############################################
+// #################################################
+// ## 692. An alternative way of defining actions ##
+// #################################################
 
 // export const INCREMENT = '[Counter] Increment';
 
