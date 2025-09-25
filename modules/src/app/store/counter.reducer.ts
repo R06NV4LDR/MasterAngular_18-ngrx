@@ -8,8 +8,9 @@ export const counterReducer = createReducer(
   on(increment, (state,action) => state + action.value),
   on(decrement, (state, action) => state - action.value)
 );
-
-// 692. An alternative way of defining actions
+// ##############################################
+// 692. An alternative way of defining actions ##
+// ##############################################
 
 // export function counterReducer(state = initialState, action: CounterActions) {
 //   if (action.type === '[Counter] Increment') {
