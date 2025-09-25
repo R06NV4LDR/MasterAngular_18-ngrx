@@ -1,18 +1,34 @@
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Store } from '@ngrx/store';
-import { AsyncPipe } from '@angular/common';
-import { selecOctupleCount, selectCount, selectDecupleCount, selectNonupleCount, selectSeptupleCount } from '../store/counter.selector';
+import { Component } from "@angular/core";
+import { Observable } from "rxjs";
+import { Store } from "@ngrx/store";
+import { AsyncPipe } from "@angular/common";
+import {
+  selectCount,
+  selectDoubleCount,
+  selectTripleCount,
+  selectQuadrupleCount,
+  selectQuintupleCount,
+  selectSextupleCount,
+  selectSeptupleCount,
+  selecOctupleCount,
+  selectNonupleCount,
+  selectDecupleCount,
+} from "../store/counter.selector";
 
 @Component({
-  selector: 'app-counter-output',
-  templateUrl: './counter-output.component.html',
-  styleUrls: ['./counter-output.component.css'],
+  selector: "app-counter-output",
+  templateUrl: "./counter-output.component.html",
+  styleUrls: ["./counter-output.component.css"],
   standalone: true,
-  imports: [AsyncPipe]
+  imports: [AsyncPipe],
 })
 export class CounterOutputComponent {
   count$: Observable<number>;
+  doubleCount$: Observable<number>;
+  tripleCount$: Observable<number>;
+  quadrupleCount$: Observable<number>;
+  quintupleCount$: Observable<number>;
+  sextupleCount$: Observable<number>;
   septupleCount$: Observable<number>;
   octupleCount$: Observable<number>;
   nonupleCount$: Observable<number>;
@@ -20,9 +36,15 @@ export class CounterOutputComponent {
 
   constructor(private store: Store<{ counter: number }>) {
     this.count$ = store.select(selectCount);
+    this.doubleCount$ = store.select(selectDoubleCount);
+    this.tripleCount$ = store.select(selectTripleCount);
+    this.quadrupleCount$ = store.select(selectQuadrupleCount);
+    this.quintupleCount$ = store.select(selectQuintupleCount);
+    this.sextupleCount$ = store.select(selectSextupleCount);
+
     this.septupleCount$ = store.select(selectSeptupleCount);
     this.octupleCount$ = store.select(selecOctupleCount);
-    this.nonupleCount$ = store.select(selectNonupleCount); 
+    this.nonupleCount$ = store.select(selectNonupleCount);
     this.decupleCount$ = store.select(selectDecupleCount);
   }
 }
