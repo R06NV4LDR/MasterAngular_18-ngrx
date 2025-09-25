@@ -13,6 +13,8 @@ import {
   selecOctupleCount,
   selectNonupleCount,
   selectDecupleCount,
+  selectUndecupleCount,
+  selectDuodecupleCount
 } from "../store/counter.selector";
 
 @Component({
@@ -33,6 +35,8 @@ export class CounterOutputComponent {
   octupleCount$: Observable<number>;
   nonupleCount$: Observable<number>;
   decupleCount$: Observable<number>;
+  undecupleCount$: Observable<number>;
+  duodecupleCount$: Observable<number>;
 
   constructor(private store: Store<{ counter: number }>) {
     this.count$ = store.select(selectCount);
@@ -46,5 +50,7 @@ export class CounterOutputComponent {
     this.octupleCount$ = store.select(selecOctupleCount);
     this.nonupleCount$ = store.select(selectNonupleCount);
     this.decupleCount$ = store.select(selectDecupleCount);
+    this.undecupleCount$ = store.select(selectUndecupleCount);
+    this.duodecupleCount$ = store.select(selectDuodecupleCount);
   }
 }

@@ -38,3 +38,11 @@ export const selectDecupleCount = createSelector(
   selectCount,
   (state: number) => state * 10
 );
+export const selectUndecupleCount = createSelector(
+  selectCount,
+  (state: number) => state * 11
+);
+export const selectDuodecupleCount = createSelector(
+  selectCount,
+  (state: number) => state * 12
+);
