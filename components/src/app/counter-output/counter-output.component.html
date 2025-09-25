@@ -1,16 +1,77 @@
+<h1 class="counter">Number:</h1>
+<p class="counter">{{ count$ | async }}</p>
+<hr />
+
 <p class="counter">
-  Single: {{ count$ | async }} | Double: {{ doubleCount$ | async }}
+  <span class="number">
+    {{ count$ | async }}
+  </span>
+  <span class="symbol">x </span>
+  <span class="multiplier">1</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ count$ | async }}</span>
 </p>
 <p class="counter">
-  Triple: {{ tripleCount$ | async }} | Quadruple: {{ quadrupleCount$ | async }}
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">2</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ doubleCount$ | async }}</span>
 </p>
 <p class="counter">
-  Quintuple: {{ quintupleCount$ | async }} | Sextuple:
-  {{ sextupleCount$ | async }}
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">3</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ tripleCount$ | async }}</span>
 </p>
 <p class="counter">
-  Septuple: {{ septupleCount$ | async }} | Octuple: {{ octupleCount$ | async }}
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">4</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ quadrupleCount$ | async }}</span>
 </p>
 <p class="counter">
-  Nonuple: {{ nonupleCount$ | async }} | Decuple: {{ decupleCount$ | async }}
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">5</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ quintupleCount$ | async }}</span>
+</p>
+<p class="counter">
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">6</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ sextupleCount$ | async }}</span>
+</p>
+<p class="counter">
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">7</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ septupleCount$ | async }}</span>
+</p>
+<p class="counter">
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">8</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ octupleCount$ | async }}</span>
+</p>
+
+<p class="counter">
+  <span class="number">{{ count$ | async }}</span>
+  <span class="symbol">x </span>
+  <span class="multiplier">9</span>
+  <span class="symbol">=</span>
+  <span class="result">{{ nonupleCount$ | async }}</span>
+</p>
+<p class="counter">
+    <span class="number">{{ count$ | async }}</span>
+    <span class="symbol">x </span>
+    <span class="multiplier">10</span>
+    <span class="symbol">=</span>
+    <span class="result">{{ decupleCount$ | async }}</span>
 </p>
