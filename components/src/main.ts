@@ -1,9 +1,9 @@
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideStore } from '@ngrx/store';
 
-import { AppModule } from "./app/app.module";
-import { provideStore } from "@ngrx/store";
-import { counterReducer } from "./app/store/counter.reducer";
+import { AppComponent } from './app/app.component';
+import { counterReducer } from './app/store/counter.reducer';
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideStore({ counter: counterReducer })],
+});
