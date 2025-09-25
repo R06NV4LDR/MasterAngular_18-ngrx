@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 export class CounterOutputComponent {
   count$: Observable<number>;
 
-  constructor(private store: Store<{ counter: number }>) {
+  constructor(store: Store<{ counter: number }>) {
     this.count$ = store.select("counter");
   }
 }
